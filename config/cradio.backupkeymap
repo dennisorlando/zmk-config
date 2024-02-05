@@ -8,6 +8,8 @@
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define DEFAULT 0
+#define NUM 1
 
 / {
     behaviors {
@@ -36,18 +38,20 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp W      &kp L      &kp R      &kp B      &kp Z          &kp SEMI     &kp Q      &kp U      &kp D      &kp J
+            &kp W      &kp L      &kp R      &kp B      &kp Z          &kp SQT     &kp Q      &kp U      &kp D      &kp J
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
             HRML(S,        H,         N,         T)     &kp COMMA       &kp DOT     HRMR(A,        E,         O,        I)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp F      &kp M      &kp V      &kp C      &kp SLASH       &kp G      &kp P      &kp X      &kp K    &kp Y
+            &kp F      &kp M      &kp V      &kp C      &trans       &kp G      &kp P      &kp X      &kp K    &kp Y
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &mo NUM     &kp ENTER     &kp BSPC  &kp 1 SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
+
+
 
         right_layer {
             bindings = <
